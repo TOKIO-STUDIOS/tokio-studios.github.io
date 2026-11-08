@@ -1,6 +1,8 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Autorización recibida</title><link rel="stylesheet" href="style.css"></head><body><main>
 <h1>Autorización recibida</h1>
-<p>Copia la dirección completa de esta página (la barra del navegador) y pégala en la terminal donde ejecutaste <code>python -m avs.publish.tiktok auth</code>.</p>
-<p>Copy this page's full address from the browser bar and paste it into the terminal where you ran the authorization command.</p>
+<p><strong>Copia la dirección completa de esta página</strong> (la barra del navegador) y pégala en el campo <em>redirect_url</em> del flujo <strong>"Conectar TikTok"</strong> de GitHub Actions, o en la terminal si usas <code>python -m avs.publish.tiktok auth</code>.</p>
+<p><button id="copy" type="button">Copiar dirección / Copy URL</button> <span id="ok"></span></p>
+<p>Copy this page's full address and paste it into the <em>redirect_url</em> field of the "Conectar TikTok" GitHub Actions workflow (or the terminal).</p>
+<script>document.getElementById("copy").onclick=function(){navigator.clipboard.writeText(location.href).then(function(){document.getElementById("ok").textContent="✓ Copiado";});};</script>
 <p class="meta">El código caduca en unos minutos y solo sirve una vez · The code expires in a few minutes and works only once.</p>
 </main></body></html>
